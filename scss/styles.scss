@@ -1,0 +1,101 @@
+/* Import polices Shrikhand et Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+
+/* Couleurs de la charte graphique du projet */
+$color-main: #9356DC;
+$color-second: #FF79DA;
+$color-third: #99E2D0;
+
+/* Autres couleurs */
+$color-footer-text: white;
+$color-footer-bg: #353535;
+
+/* Polices */
+$police-logo-titres: Shrikhand;
+$police-texte: Roboto;
+
+/* Tailles polices */
+$size-h1: 30px;
+
+@mixin headings ($hx: 0){
+    @if $hx != 0 {
+        #{$hx}{
+            @content;
+        }
+    } @else {
+        h1, h2, h3,
+        h4, h5, h6 {
+            @content;
+        }
+    }
+}
+
+@include headings(h1) {
+    font-family: $police-logo-titres;
+    font-weight: 500;
+    font-size: $size-h1;
+}
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main, footer{
+    font-family: $police-texte;
+}
+
+header{
+    .logo{
+        text-transform: lowercase;
+        color: black;
+    }
+}
+
+footer{
+    background-color: $color-footer-bg;
+    color: $color-footer-text;
+}
+
+fieldset, input[type=search]{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
+}
+
+.card-image img{
+    object-fit: cover;
+}
+
+.parent-clicable{
+    position: relative;
+}
+
+.parent-clicable-link{
+    display: block;
+    z-index: 1;
+}
+
+.parent-clicable-link::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
+}
