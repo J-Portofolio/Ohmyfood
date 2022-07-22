@@ -103,7 +103,6 @@ form fieldset input[type=search] ::placeholder {
 }
 .cards-section .cards-box .card {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 10px;
   height: 250px;
@@ -138,5 +137,6 @@ form fieldset input[type=search] ::placeholder {
   margin: 5px 0;
 }
 .cards-section .cards-box .card i {
+  align-self: center;
   margin-right: 20px;
 }/*# sourceMappingURL=main.css.map */
