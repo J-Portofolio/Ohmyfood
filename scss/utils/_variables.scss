@@ -4,6 +4,9 @@ $color-second: #FF79DA;
 $color-third: #99E2D0;
 
 // Autres couleurs //
+$color-section-bg: #F2F2F2;
+$color-text-standard: darken($color-section-bg, 50%);
+$color-form-bg: darken($color-section-bg, 10%);
 $color-footer-text: white;
 $color-footer-bg: #353535;
 
@@ -13,3 +16,7 @@ $police-texte: Roboto;
 
 // Tailles polices //
 $size-h1: 30px;
+
+// Tailles éléments //
+$hauteur-form: 50px;
+$hauteur-carte: 250px;

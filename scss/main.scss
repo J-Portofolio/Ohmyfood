@@ -1,5 +1,10 @@
 @import "./utils/variables";
+@import "./utils/fonctions";
 @import "./utils/mixins";
 @import "./vendors/polices";
 @import "./vendors/icones";
 @import"./base/base";
+@import"./layouts/header";
+@import"./layouts/footer";
+@import"./layouts/form";
+@import"./layouts/cards";
