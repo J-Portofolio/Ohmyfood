@@ -1,0 +1,13 @@
+@mixin headings ($niv: 0){
+    @if is-number($niv) and round($niv) == $niv {
+        h#{$niv}{
+            @content;
+        }
+    }
+    @else {
+        h1, h2, h3,
+        h4, h5, h6 {
+            @content;
+        }
+    }
+}
