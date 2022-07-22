@@ -1,0 +1,19 @@
+form{
+    background-color: $color-form-bg;
+    height: $hauteur-form;
+    fieldset{
+        border: none;
+        padding: 0;
+        margin: auto;
+        height: 100%;
+        width: 50%;
+        input[type=search]{
+            border:inherit;
+            height: inherit;
+            background-color: inherit;
+            ::placeholder{
+                color: black;
+            }
+        }
+    }
+}

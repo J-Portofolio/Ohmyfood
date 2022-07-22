@@ -1,5 +1,5 @@
 @mixin headings ($niv: 0){
-    @if is-number($niv) and round($niv) == $niv {
+    @if $niv > 0 {
         h#{$niv}{
             @content;
         }

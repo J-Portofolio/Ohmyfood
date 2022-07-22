@@ -1,0 +1,45 @@
+.cards-section{
+    padding: 15px;
+    background-color: $color-section-bg;
+    .cards-box{
+        .card{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            height: $hauteur-carte;
+            border-radius: 20px;
+            background-color: white;
+            .card-image{
+                position: relative;
+                flex: 1 1 100%;
+                height: 70%;
+                img{
+                    border-radius: 20px 20px 0 0;
+                    object-fit: cover;
+                }
+                &.nouveau::before{
+                    position: absolute;
+                    content: "Nouveau";
+                    right: 15px;
+                    top: 15px;
+                    background-color: $color-third;
+                    color: darken($color-third, 40%);
+                    font-weight: bold;
+                    padding: 7px 9px;
+                    font-size: small;
+                }
+            }
+            .card-text{
+                padding: 0 15px;
+                flex: 1 1 auto;
+                * {
+                    margin: 5px 0;
+                }
+            }
+            i{
+                margin-right: 20px;
+            }
+        }
+    }
+}

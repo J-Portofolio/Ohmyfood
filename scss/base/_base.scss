@@ -1,37 +1,35 @@
-@include headings(1) {
-    font-family: $police-logo-titres;
-    font-weight: 500;
-    font-size: $size-h1;
-}
-
 body{
+    font-family: $police-texte;
     box-sizing: border-box;
     margin: 0;
-}
-
-main, footer{
-    font-family: $police-texte;
-}
-
-header{
-    .logo{
-        text-transform: lowercase;
-        color: black;
+    @include headings(1) {
+        font-family: $police-logo-titres;
+        font-weight: 500;
+        font-size: $size-h1;
     }
-}
-
-footer{
-    background-color: $color-footer-bg;
-    color: $color-footer-text;
-}
-
-fieldset, input[type=search]{
-    border: none;
+    @include headings(){
+        margin: auto;
+        &.logo{
+            font-family: $police-logo-titres;
+        }
+    }
+    main{
+        section{
+            &:first-of-type{
+                text-align: center;
+                background-color: $color-section-bg;
+            }
+        }
+    }
 }
 
 a{
     text-decoration: none;
     color: inherit;
+}
+
+p{
+    color: $color-text-standard;
 }
 
 ul{
@@ -42,10 +40,6 @@ img{
     aspect-ratio: 1/1;
     height: 100%;
     width: 100%;
-}
-
-.card-image img{
-    object-fit: cover;
 }
 
 .parent-clicable{

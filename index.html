@@ -14,8 +14,7 @@
         <form id="form-recherche">
             <fieldset>
                 <label for="recherche">
-                    <i class="icon recherche">
-                    </i>
+                    <i class="fa-solid fa-location-dot"></i>
                 </label>
                 <input name="recherche" id="recherche" type="search" placeholder="Paris, Belleville">
             </fieldset>
@@ -28,34 +27,36 @@
         <section>
             <h2>Fonctionnement</h2>
             <ul>
-                <li>Choisissez un restaurant</li>
-                <li>Composez votre menu</li>
-                <li>Dégustez au restaurant</li>
+                <li><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+                <li><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
+                <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
             </ul>
         </section>
-        <section id="restaurants">
+        <section class="cards-section">
             <h2>Restaurants</h2>
             <div class="cards-box">
                 <article class="card parent-clicable">
                     <a class="parent-clicable-link" href="menus/la-palette-du-gout.html"></a>
-                    <div class="card-image">
+                    <div class="card-image nouveau">
                         <img src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
                     </div>
                     <div class="card-text">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
+                    <i class="fa-regular fa-heart"></i>
                 </article>
 
                 <article class="card parent-clicable">
                     <a class="parent-clicable-link" href="menus/la-note-enchantee.html"></a>
-                    <div class="card-image">
+                    <div class="card-image nouveau">
                         <img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
                     </div>
                     <div class="card-text">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
+                    <i class="fa-regular fa-heart"></i>
                 </article>
 
                 <article class="card parent-clicable">
@@ -67,6 +68,7 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                 </article>
 
                 <article class="card parent-clicable">
@@ -78,6 +80,7 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                 </article>
             </div>
         </section>
@@ -85,8 +88,8 @@
     <footer>
         <h2 class="logo">Ohmyfood</h2>
         <ul>
-            <li><a href="#">Proposer un restaurant</a></li>
-            <li><a href="#">Devenir partenaire</a></li>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:test@test.test">Contact</a></li>
         </ul>
