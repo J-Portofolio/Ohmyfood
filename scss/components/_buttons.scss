@@ -1,0 +1,15 @@
+.bouton{
+    display: inline-block;
+    color: $color-button-text;
+    background: $color-button-bg;
+    border-radius: 30px;
+    padding: 18px;
+    font-weight: bold;
+    box-shadow: $ombre-bouton;
+    transition: 200ms;
+    &:hover{
+        color: darken($color-button-text, 5%);
+        background: $color-button-bg-hover;
+        box-shadow: $ombre-bouton-hover;
+    }
+}

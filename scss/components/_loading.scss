@@ -1,0 +1,36 @@
+.loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    z-index:-1;
+    opacity: 0;
+    animation:  loading 3s ease-out;
+    .loading-content{
+        animation:  color-cycle 3s ease-out;
+        &::before{
+            font-family: Shrikhand;
+            content: "Ohmyfood";
+        }
+        .loading-text{
+            &::before{
+                content:"";
+                animation: loading-dynamic-text 4.5s ease-in-out;
+            }
+        }
+        i{
+            animation: rotation-cycle 1s 3 ease-out;
+        }
+        p, i, &::before{
+            font-size: 5vw;
+        }
+    }
+}

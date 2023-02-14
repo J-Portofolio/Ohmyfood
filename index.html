@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="public/css/main.min.css">
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-content">
+            <p class="loading-text"></p>
+            <i class="fa-solid fa-circle-notch"></i>
+        </div>
+    </div>
+    <header id="header">
+        <h1 class="logo">Ohmyfood</h1>
+    </header>
+    <main>
+        <form class="search-form">
+            <fieldset>
+                <label class="icon-control-label" for="recherche">
+                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                </label>
+                <input name="recherche" id="recherche" type="search" placeholder="Saisir un lieu" value="Paris, Belleville">
+            </fieldset>
+        </form>
+        <section class="bg-color txt-center">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a class="bouton" href="#restaurants">Explorer nos restaurants</a>
+        </section>
+        <section>
+            <h2>Fonctionnement</h2>
+            <ul class="list-elements pastilles">
+                <li class="list-element pastille"><i class="fa-solid fa-mobile-screen-button fa-lg"></i>Choisissez un restaurant</li>
+                <li class="list-element pastille"><i class="fa-solid fa-list-ul fa-lg"></i>Composez votre menu</li>
+                <li class="list-element pastille"><i class="fa-solid fa-store fa-lg"></i>Dégustez au restaurant</li>
+            </ul>
+        </section>
+        <section id="restaurants" class="cards-section">
+            <h2>Restaurants</h2>
+            <div class="cards-box">
+                <article class="card parent-clicable">
+                    <a class="parent-clicable-link" href="menus/la-palette-du-gout.html"></a>
+                    <div class="card-image nouveau">
+                        <img src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
+                    </div>
+                    <div class="card-text">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <input type="checkbox" id="favori-1" class="icon-control-checkbox">
+                    <label class="icon-control-label" for="favori-1">
+                        <i class="fa-regular fa-heart fa-xl icon-hover"></i>
+                        <i class="fa-solid fa-heart fa-xl icon-fill"></i>
+                    </label>
+                </article>
+
+                <article class="card parent-clicable">
+                    <a class="parent-clicable-link" href="menus/la-note-enchantee.html"></a>
+                    <div class="card-image nouveau">
+                        <img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
+                    </div>
+                    <div class="card-text">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <input type="checkbox" id="favori-2" class="icon-control-checkbox">
+                    <label class="icon-control-label" for="favori-2">
+                        <i class="fa-regular fa-heart fa-xl icon-hover"></i>
+                        <i class="fa-solid fa-heart fa-xl icon-fill"></i>
+                    </label>
+                </article>
+
+                <article class="card parent-clicable">
+                    <a class="parent-clicable-link" href="menus/a-la-francaise.html"></a>
+                    <div class="card-image">
+                        <img src="images/restaurants/a-la-francaise.jpg" alt="À la française">
+                    </div>
+                    <div class="card-text">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <input type="checkbox" id="favori-3" class="icon-control-checkbox">
+                    <label class="icon-control-label" for="favori-3">
+                        <i class="fa-regular fa-heart fa-xl icon-hover"></i>
+                        <i class="fa-solid fa-heart fa-xl icon-fill"></i>
+                    </label>
+                </article>
+
+                <article class="card parent-clicable">
+                    <a class="parent-clicable-link" href="menus/le-delice-des-sens.html"></a>
+                    <div class="card-image">
+                        <img src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
+                    </div>
+                    <div class="card-text">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <input type="checkbox" id="favori-4" class="icon-control-checkbox">
+                    <label class="icon-control-label" for="favori-4">
+                        <i class="fa-regular fa-heart fa-xl icon-hover"></i>
+                        <i class="fa-solid fa-heart fa-xl icon-fill"></i>
+                    </label>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 class="logo">Ohmyfood</h2>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:test@test.test">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Responsive */
+@mixin responsive($min, $max:false) {
+    @if $max != false {
+        $max: $max - 1px;
+        @if $min == false {
+            @media (max-width:$max) and (orientation: landscape), (max-width:$max) and (orientation: portrait)  {
+                @content;
+            }
+        }
+        @else{
+            @media (min-width: $min) and (max-width:$max) and (orientation: landscape), (min-width: $min) and (max-width:$max) and (orientation: portrait) {
+                @content;
+            }
+        }
+    }
+    @else {
+        @media (min-width: $min) and (orientation: landscape), (min-width: $min) and (orientation: portrait){
+            @content;
+        }
+    }
+}
+
+/* Automatisations */
+
+@mixin headings ($niv: 0){
+    @if $niv > 0 {
+        h#{$niv}{
+            @content;
+        }
+    }
+    @else {
+        h1, h2, h3,
+        h4, h5, h6 {
+            @content;
+        }
+    }
+}
+
+@mixin differ-animation ($animation) {
+    @for $i from 1 through 10{
+        &:nth-child(#{$i}) {
+            animation: $animation #{$i * 0.5}s ease-in-out 0s;
+        }
+    }
+}

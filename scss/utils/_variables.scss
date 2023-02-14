@@ -1,0 +1,55 @@
+// Longueurs minimum d'écrans périphériques //
+$smartphone: 0px;
+$tablette: 768px;
+$pc: 1200px;
+
+// Couleurs de la charte graphique du projet //
+$color-main: #9356DC;
+$color-second: #FF79DA;
+$color-third: #99E2D0;
+
+// Couleur des parties du site //
+$color-section-bg: #F2F2F2;
+$color-form-bg: darken($color-section-bg, 5%);
+$color-footer-text: white;
+$color-footer-bg: #353535;
+
+// Couleurs des textes //
+$color-text-standard: darken($color-section-bg, 50%);
+$color-headings-main: darken($color-section-bg, 100%);
+
+//Couleur des éléments //
+$color-icon-active: linear-gradient(to top,$color-second,$color-main);
+$color-button-text: white;
+$color-button-bg:linear-gradient($color-second,$color-main);
+$color-button-bg-hover:linear-gradient(lighten($color-second, 3%), lighten($color-main, 3%));
+$color-list-element-bg: mix($color-section-bg, $color-main, 99.9%);
+$color-list-element-bg-hover: lighten($color-main, 35%);
+$color-menu-element-bg: white;
+
+// Polices //
+$police-logo-titres: Shrikhand;
+$police-texte: Roboto;
+
+// Tailles polices //
+$size-h1-header: 30px;
+$size-h1-main: 28px;
+$size-h2-main: 17px;
+$size-h3-menu-element: $size-h2-main;
+$size-p: 18px;
+$size-p-smartphone: 15px;
+$size-p-menu-element: 15px;
+
+// Tailles éléments //
+$hauteur-form: 50px;
+$hauteur-carte: 260px;
+$hauteur-list-element: 75px;
+$hauteur-menu-element: 60px;
+
+// Effets //
+
+// Ombres //
+$ombre-bouton: 0px 3px 10px 3px darken($color-section-bg, 15%);
+$ombre-bouton-hover: 0px 5px 10px 5px darken($color-section-bg, 20%);
+$ombre-carte: 0px 0px 10px 3px darken($color-section-bg, 10%);
+$ombre-carte-hover: 0px 5px 10px 5px darken($color-section-bg, 15%);

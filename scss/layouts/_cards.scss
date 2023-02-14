@@ -1,0 +1,67 @@
+.cards-section{
+    background-color: $color-section-bg;
+    .cards-box{
+        margin-top: 20px;
+        @include responsive($tablette){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            height: $hauteur-carte;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: $ombre-carte;
+            @include responsive($smartphone, $tablette){
+                margin-bottom: 20px;
+            }
+            @include responsive($tablette, $pc){
+                flex: 40%;
+                margin: 10px;
+            }
+            @include responsive($pc){
+                flex: 20%;
+                margin: 10px;
+            }
+            &:hover{
+                box-shadow: $ombre-carte-hover;
+            }
+            .card-image{
+                position: relative;
+                flex: 1 1 100%;
+                height: 70%;
+                img{
+                    border-radius: 20px 20px 0 0;
+                    object-fit: cover;
+                }
+                &.nouveau::before{
+                    position: absolute;
+                    content: "Nouveau";
+                    right: 15px;
+                    top: 15px;
+                    background-color: $color-third;
+                    color: darken($color-third, 40%);
+                    font-weight: bold;
+                    padding: 7px 9px;
+                    font-size: small;
+                }
+            }
+            .card-text{
+                padding: 0 15px;
+                flex: 1 1 auto;
+                * {
+                    margin: 5px 0;
+                }
+            }
+            label{
+                align-self: center;
+                padding-right: 15px;
+                i{
+                    color: $color-text-standard;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+html{
+    scroll-behavior: smooth;
+    body{
+        font-family: $police-texte;
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        position: relative;
+
+        @include headings(1) {
+            font-family: $police-logo-titres;
+            font-weight: 500;
+            font-size: $size-h1-header;
+        }
+        @include headings(){
+            margin: auto;
+            &.logo{
+                font-family: $police-logo-titres;
+            }
+        }
+        main{
+            &:not(.rounded-content) section{
+                padding: 50px 20px;
+            }
+            &.rounded-content{
+                padding: 0 20px 40px 20px;
+                z-index: 1;
+                border-radius: 40px 40px 0 0;
+                margin-top: -40px;
+
+                .header-content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                @include headings(1){
+                    display: inline-block;
+                    font-size: $size-h1-main;
+                    margin: 30px 25px 30px 0;
+                }
+
+                @include headings(2){
+                    font-size: $size-h2-main;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: $color-headings-main;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        border-radius: 1px;
+                        border-bottom: 3px solid $color-third;
+                        margin: 7px 0;
+                    }
+                }
+            }
+        }
+        .bg-color{
+            background: $color-section-bg;
+        }
+        .txt-center{
+            text-align: center;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    p{
+        font-weight: 300;
+        font-size: $size-p;
+    }
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    img{
+        aspect-ratio: 1/1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .logo{
+        font-family: $police-logo-titres;
+    }
+
+    .parent-clicable{
+        position: relative;
+    }
+
+    .parent-clicable-link{
+        display: block;
+        z-index: 1;
+    }
+
+    .parent-clicable-link::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: ' ';
+    }
+}

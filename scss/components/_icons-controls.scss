@@ -1,0 +1,90 @@
+.icon-control-checkbox{
+    display: none;
+}
+.icon-control-label{
+    z-index: 1;
+    i{
+        cursor: pointer;
+    }
+}
+
+//Icônes coeurs
+.icon-control-checkbox[id*="favori"] + .icon-control-label{
+    display: inline-grid;
+    -webkit-transition: transform .5s ease-out;
+    transition: transform .4s ease-out;
+    &:active{
+        animation: scaling-delay .4s ease-in-out;
+    }
+    @include responsive($pc){
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+    i{
+        grid-area: 1/1;
+    }
+    .icon-fill{
+        opacity: 0;
+        -webkit-transition: opacity .7s ease-in-out, transform 0.4s ease-in-out;
+        transition: opacity .7s ease-in-out, transform 0.4s ease-in-out;
+        &:before{
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: $color-icon-active;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+    }
+}
+
+.icon-control-checkbox[id*="favori"]:checked + .icon-control-label{
+    @include responsive($pc){
+        &:active{
+            .icon-fill{
+                opacity: 0;
+            }
+        }
+    }
+    .icon-fill{
+        opacity: 1;
+    }
+}
+
+.icon-control-checkbox[id*="favori"]:not(:checked) + .icon-control-label{
+    @include responsive($pc){
+        &:active, &:hover{
+            .icon-fill{
+                opacity: 1;
+            }
+        }
+    }
+    .icon-fill{
+        opacity: 0;
+    }
+}
+
+.menu-element{
+    .icon-container {
+        transition: width 0.4s ease-in-out;
+        width: 0;
+        i{
+            margin: 0;
+            &::before{
+                display: inline-block;
+                transform-origin: center;
+            }
+        }
+    }
+
+    //&:hover label ~ .icon-container,//
+    .icon-control-checkbox[id*="menu-item"]:checked + .icon-control-label ~ .icon-container{
+        width: 60px;
+        i{
+            &::before{
+                transition: transform 0.4s ease-in-out;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

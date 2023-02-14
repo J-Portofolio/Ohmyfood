@@ -1,0 +1,134 @@
+.list-elements{
+    @include responsive($tablette){
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 20px 0;
+    }
+    &.pastilles{
+        counter-reset: compteur-pastilles;
+    }
+    li{
+        display: flex;
+        margin: 20px 0;
+        &.pastille{
+            @include responsive($tablette){
+                flex: 1;
+            }
+            &:before{
+                counter-increment: compteur-pastilles;
+                content: counter(compteur-pastilles);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                width: 25px;
+                height: 25px;
+                font-size: 15px;
+                margin-left: calc(-25px/2);
+                background: $color-main;
+                border-radius: 50%;
+            }
+            @include responsive($tablette){
+                &:not(:last-of-type){
+                    margin-right: 5%;
+                }
+            }
+            @include responsive($tablette, $pc){
+                font-size: 1em;
+            }
+        }
+
+        &.list-element{
+            cursor: pointer;
+            height:$hauteur-list-element;
+            text-align: center;
+            align-items: center;
+            letter-spacing: 0.25px;
+            font-weight: 500;
+            background-color: $color-list-element-bg;
+            border-radius: 25px;
+            transition: 200ms;
+
+            &:hover{
+                background-color: $color-list-element-bg-hover;
+                i {
+                    color: $color-main;
+                }
+            }
+        }
+
+        &.menu-element{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            cursor: pointer;
+            background-color: $color-menu-element-bg;
+            border-radius: 20px;
+            justify-content: space-between;
+            align-items: stretch;
+            overflow: hidden;
+            @include differ-animation(menu-item-load);
+            @include responsive($tablette, $pc){
+                flex: 0 0 45%;
+                margin: 10px;
+            }
+            @include responsive($pc){
+                flex: 0 0 20%;
+                margin: 10px;
+            }
+            label{
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                @include responsive($pc){
+                    cursor: pointer;
+                }
+            }
+
+            .menu-element-item{
+                &:first-of-type{
+                    flex: 1;
+                    min-width: 0;
+                    margin: 15px;
+                    * {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+                &:nth-of-type(2){
+                    align-self: flex-end;
+                    margin: 15px 15px 15px 0;
+                }
+                &.icon-container{
+                    border-radius: 0 20px 20px 0;
+                    background: $color-third;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i {
+                        color:white;
+                    }
+                }
+            }
+            h3, p {
+                margin: 0;
+            }
+
+            @include headings(3){
+                font-weight: 500;
+                font-size: $size-h3-menu-element;
+            }
+
+            p{
+                font-size: $size-p-menu-element;
+            }
+        }
+
+        i{
+            margin: 0 5%;
+            color: $color-text-standard;
+        }
+    }
+}

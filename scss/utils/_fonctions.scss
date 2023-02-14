@@ -1,0 +1,3 @@
+@function hauteurParent($hauteurEnfant ,$nbelem, $marge){
+    @return calc(($hauteurEnfant + $marge) * $nbelem);
+}

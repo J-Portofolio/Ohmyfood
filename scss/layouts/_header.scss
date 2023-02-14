@@ -1,0 +1,33 @@
+header{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    nav, h1.logo{
+        margin: 10px;
+    }
+    nav{
+        flex: 1 1 100%;
+    }
+    i{
+        cursor: pointer;
+        line-height: unset !important;
+        float: left;
+        top: 35%;
+        left: 3%;
+        width: 21px;
+        height: 21px;
+    }
+    .logo{
+        font-size: 30px;
+        text-transform: lowercase;
+        color: black;
+    }
+    .header-image{
+        z-index: -1;
+        max-height: 260px;
+        img{
+            object-fit: cover;
+        }
+    }
+}
