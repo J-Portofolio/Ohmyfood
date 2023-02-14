@@ -19,7 +19,7 @@ https://j-portofolio.github.io/Ohmyfood/
 
 <img src="maquettes/Menu-la_palette_du_gout.png" height="500" title="Menu - La palette du goût">
 
-### Menu - Le délice des sens --
+### Menu - Le délice des sens
 
 <img src="maquettes/Menu-le_delice_des_sens.png" height="500" title="Menu - Le délice des sens">
 
